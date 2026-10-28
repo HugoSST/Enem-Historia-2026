@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ágora · Quiz ENEM de Humanas</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="cols" aria-hidden="true"></div>
+<main>
+<section id="start" class="card">
+ <svg class="owl" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#b8863b" stroke-width="3"><path d="M30 40c0-18 15-28 30-28s30 10 30 28v34c0 22-14 36-30 36S30 96 30 74z"/><circle cx="46" cy="50" r="12"/><circle cx="74" cy="50" r="12"/><path d="M60 58l-5 10h10zM42 82q18 14 36 0M42 92q18 14 36 0"/></g><circle cx="46" cy="50" r="4" fill="#b8863b"/><circle cx="74" cy="50" r="4" fill="#b8863b"/></svg>
+ <h1>Ágora</h1>
+ <p class="sub">Quiz de Filosofia, História e Sociologia · Simulado ENEM 2026</p>
+ <div class="opts" role="group" aria-label="Matéria">
+  <button class="chip on" data-f="Todas">Todas (30)</button>
+  <button class="chip" data-f="História">História (15)</button>
+  <button class="chip" data-f="Filosofia">Filosofia (9)</button>
+  <button class="chip" data-f="Sociologia">Sociologia (6)</button>
+ </div>
+ <label class="chk"><input type="checkbox" id="shuf"> Embaralhar a ordem das questões</label>
+ <button class="go" id="go">Começar</button>
+</section>
+<section id="quiz" class="card" hidden>
+ <div class="top"><span id="mat" class="badge"></span><span id="prog"></span><span id="pts"></span></div>
+ <div class="bar"><i id="barI"></i></div>
+ <h2 id="num"></h2>
+ <p id="txt" class="txt"></p>
+ <div id="alts"></div>
+ <div id="fb" class="fb" hidden></div>
+ <button class="go" id="next" hidden>Próxima</button>
+</section>
+<section id="end" class="card" hidden>
+ <h1>Fim da jornada</h1>
+ <p class="big" id="score"></p>
+ <p id="msg" class="sub"></p>
+ <div id="byM"></div>
+ <details id="errs"><summary>Questões para rever</summary><ul id="errList"></ul></details>
+ <button class="go" id="again">Jogar de novo</button>
+</section>
+</main>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body></html>
